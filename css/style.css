@@ -1,0 +1,378 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+body
+{
+	font-family: 'Oswald', sans-serif;
+	background-color: #D9D9D9;
+}
+
+@media (max-width: 992px) {
+  .logueo {
+    background: none!important;
+    padding-top: 0px!important;
+    height: 252px!important;
+  }
+  #oculta
+  {
+  	display: none!important;
+  }
+  .aparece
+  {
+  	display: block!important;
+  }
+  #panelImg
+  {
+  	display: none;
+  }
+  #logoFoot
+  {
+  	display: block;
+  	position: relative!important;
+  	margin-top: 10px;
+  }
+  #panelCont 
+  	{
+  		min-height: 430px!important;
+  	}
+
+}
+ .aparece
+  {
+  	display: none;
+  }
+.usuarioTop
+{
+	text-align: right;
+	font-size: 16px;
+	color: white;
+	padding: 15px;
+}
+.menu_invi>li
+{
+	cursor: pointer;
+}
+.bannerTop
+{
+	background: url('../images/cabecera.png') center #298DB1;
+	
+}
+
+.logo
+{
+	margin-top: 20px;
+}
+.subtitulo
+{
+	font-size: 22px;
+	color: #46556D;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#panelCont
+{
+	background-color: #F8F5E3;
+	border-left: 3px #CDCDCD solid;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	min-height: 900px;
+}
+.padingcero
+{
+	padding-right: 0px;
+    padding-left: 0px;
+}
+    
+.breadpasos
+{
+color: #999!important;
+text-decoration: none!important;
+}
+.imagen
+{
+	 box-shadow: none!important; 
+	 background-color: transparent!important;
+	 border:none!important;
+	 border-radius: none!important;
+}
+#panelImg
+{
+	background-color: #F2F2F2;
+	min-height: 900px;
+}
+.fondoform
+{
+	background-color: #52A2BB;
+	padding:20px;
+}
+
+.fondoformDerecho
+{
+	background-color: #52A2BB;
+	padding:10px;
+}
+.formContDerecho
+{
+	background-color: #F8F5E3;
+	padding:5px;
+	display: block;
+}
+.formCont
+{
+	background-color: #F8F5E3;
+	padding:10px;
+	display: block;
+}
+label
+{
+	color: #47566E;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.naranja
+{
+	color: #DF5F26!important;
+}
+.help-block
+{
+	font-size: 11px;
+	color: #47566E!important;
+}
+.radio-inline
+{
+	color: #47566E;
+	font-weight: 400!important;
+}
+.btn_naranja
+{
+	background: -webkit-linear-gradient(#F56C22, #D85827); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F56C22, #D85827); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F56C22, #D85827); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F56C22, #D85827); /* Standard syntax */
+    margin-bottom: 10px;
+}
+.btn_naranja:hover
+{
+	background-position: none;
+}
+.tablaClientes
+{
+	color: #9C9C9C;
+	text-align: center;
+	background-color: #fff;
+}
+.menu
+{
+	background-color: #0AD4F8!important;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 400; 
+	font-size: 12px;
+	display: block;
+	font-size: 0.775em;
+
+	
+
+}
+
+.menu>li
+{
+	padding: 15px 10px;
+	text-align: center;
+	border-right: 1px #079FBA solid;
+	cursor: pointer;
+}
+.menu>li.last
+{
+	
+	border-right: none;
+}
+.menu>li>.contenido_number
+{
+	margin-top: 10px;
+}
+.menu>li>.contenido_number>.number
+{
+	border-radius: 50% ;
+	background-color: #298DB1;
+	padding:5px;	
+}
+#logoFoot
+{
+	bottom: 3px; position: absolute;	
+}
+.logueo
+{
+	/*background: url('../images/logueo.png') no-repeat;*/
+background: url('../images/logueo.jpg') no-repeat;
+	height: 440px;
+	padding-top: 40px;
+	padding-left: 60px;
+
+}
+.bg_estados
+{
+	padding: 15px;
+}
+
+.btntabla
+{	
+    text-decoration: none!important;
+    color: gray!important;
+}
+/*  Estilos de STEP */
+.hiddenStepInfo {
+    display: none;
+}
+
+.activeStepInfo {
+    display: block !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.step {
+    margin-top: 27px;
+}
+
+.progress {
+    position: relative;
+    height: 25px;
+}
+
+.progress > .progress-type {
+    position: absolute;
+    left: 0px;
+    font-weight: 800;
+    padding: 3px 30px 2px 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(25, 25, 25, 0.2);
+}
+
+.progress > .progress-completed {
+    position: absolute;
+    right: 0px;
+    font-weight: 800;
+    padding: 3px 10px 2px;
+}
+
+.step {
+   
+}
+
+.step .col-md-2 {
+    background-color: #fff;
+    border: 1px solid #C0C0C0;
+    border-right: none;
+}
+
+.step .col-md-2:last-child {
+    border: 1px solid #C0C0C0;
+}
+
+.step .col-md-2:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.step .col-md-2:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.step .col-md-2:hover {
+    color: #F58723;
+    cursor: pointer;
+}
+
+.step .activestep {
+    color: #F58723;
+    height: 100px;
+    margin-top: -7px;
+    padding-top: 7px;
+    border-left: 6px solid #5CB85C !important;
+    border-right: 6px solid #5CB85C !important;
+    border-top: 3px solid #5CB85C !important;
+    border-bottom: 3px solid #5CB85C !important;
+    vertical-align: central;
+}
+
+.step .fa {
+    padding-top: 15px;
+    font-size: 40px;
+}
+
+/*Estilos del STEP*/
+
+/* estilos para los formularios */
+.errorMessage
+{
+	color: red;
+	font-size: 0.9em;
+}
+
+.errortxt
+{
+	background: #FEE;
+	border-color: #C00;
+}
+.span_req
+{
+	color: red;
+}
+
+.error_input
+{
+	background: #FEE;
+	border-color: #C00;
+}
+
+/* estilos para los formularios */
+
+/*fondos formularios*/
+#ficha
+{
+	background: url('../images/form/1.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#anamnesis
+{
+	background: url('../images/form/2.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#diagnostico
+{
+	background: url('../images/form/3.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#receta
+{
+	background: url('../images/form/4.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#indicaciones
+{
+	background: url('../images/form/5.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#historico
+{
+	background: url('../images/form/6.jpg')no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
