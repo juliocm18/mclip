@@ -182,7 +182,10 @@ class SiteController extends Controller
 						                <div style='font-size:24px;'>
 						               Detalle de su receta.<br>
 						                </div>				  
-						                Estimado ".$model->nombres.":<br>".$model_v->receta."<br>".$model_v->indicaciones."              
+						                Estimado ".$model->nombres.":<br>".$model_v->receta."<br>
+						                <div style='font-size:24px;'>
+						               	Indicaciones:<br>
+						                </div>	".$model_v->indicaciones."              
 						                </td>
 						                <td align='right' valign='middle'><table width='210' border='0' cellspacing='0' cellpadding='0'>
 						                  <tr>
