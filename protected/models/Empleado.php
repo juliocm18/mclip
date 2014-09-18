@@ -40,6 +40,15 @@ class Empleado extends CActiveRecord
 			array('dni', 'unique', 'attributeName'=>'dni'),
 			array('email', 'email'),
 			array('email', 'unique', 'attributeName'=>'email'),
+
+			array('logo', 'length', 'max'=>250),
+
+			array('logo', 'unique', 'attributeName'=>'logo'),
+			array('logo', 'file', 'types' => 'jpg, png, bmp, jpeg', 
+				'allowEmpty'=>true, 'on'=>'update'),
+			array('logo', 'file', 'types' => 'jpg, png, bmp, jpeg', 'maxSize' => 1007152, 				
+				'tooLarge' => 'No debe ser mayor a 1 mb.', 
+				'allowEmpty'=>true, 'on'=>'insert'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nombres, apellidos, dni, email', 'safe', 'on'=>'search'),
@@ -84,7 +93,7 @@ class Empleado extends CActiveRecord
 			'email' => 'Email',
 			'cmp' => 'CMP',
 			'Especialidad_id' => 'Especialidad',
-			
+			'logo' => 'Logo',
 		);
 	}
 

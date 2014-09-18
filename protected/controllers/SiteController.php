@@ -61,9 +61,24 @@ class SiteController extends Controller
 
 			$model_user=Usuario::model()->findByPk(Yii::app()->session['s_iduser']);
 
-			$cabecera="<p style='text-align: center;'><strong>Dr. ".$model_user->empleado->nombres.' '.$model_user->empleado->apellidos."</strong></p>
-			<p style='text-align: center;'><strong>Especialidad ". $model_user->empleado->especialidad->nombre."</strong></p>
-			<p style='text-align: center;'><strong>CMP ".$model_user->empleado->cmp."</strong></p>";
+			if($model_user->empleado->logo==null)
+			{
+				$cabecera="
+				<p style='text-align: center;'><img src='".Yii::app()->request->baseUrl."/images/nologo.jpg' alt='logo' width='100px' heigth='100px'></p>
+				<p style='text-align: center;'><strong>Dr. ".$model_user->empleado->nombres.' '.$model_user->empleado->apellidos."</strong></p>
+				<p style='text-align: center;'><strong>Especialidad ". $model_user->empleado->especialidad->nombre."</strong></p>
+				<p style='text-align: center;'><strong>CMP ".$model_user->empleado->cmp."</strong></p>";
+			}
+			else
+			{
+				$cabecera="
+				<p style='text-align: center;'><img src='".Yii::app()->request->baseUrl."/uploads/logos/".$model_user->empleado->logo."' alt='logo' width='100px' heigth='100px'></p>
+				<p style='text-align: center;'><strong>Dr. ".$model_user->empleado->nombres.' '.$model_user->empleado->apellidos."</strong></p>
+				<p style='text-align: center;'><strong>Especialidad ". $model_user->empleado->especialidad->nombre."</strong></p>
+				<p style='text-align: center;'><strong>CMP ".$model_user->empleado->cmp."</strong></p>";
+			}
+
+			
 
 			$mensaje_direccion='';
 			$mensaje_celular='';

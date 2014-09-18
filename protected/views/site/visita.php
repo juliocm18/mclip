@@ -384,11 +384,12 @@
 
 					  	</div>
 					  	<input type="submit" value="Guardar" class="btn btn-warning btn_naranja">
+					  	 <p class="help-block">Debe guardar la ficha técnica para poder imprimir.</p>
 					  	<div style="clear:both">&nbsp;</div>
 					  	
 					</div>
 						<div style="clear:both">&nbsp;</div>
-					<div class="bg-danger bg_estados">
+					<div class=" bg_estados">
 					  <?php echo $form->errorSummary($model); ?>
 					  <?php echo $form->errorSummary($model_v); ?>
 					</div> 

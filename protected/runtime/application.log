@@ -1847,3 +1847,526 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/robots.txt
 ---
+2014/09/15 06:02:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/15 06:02:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/15 06:03:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/17 00:06:33 [error] [exception.CException] exception 'CException' with message 'EmpleadoController no ha podido encontrar la vista "_form_update" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\mclip\protected\views\empleado\update.php(19): CController->renderPartial('_form_update', Array)
+#1 C:\xampp\htdocs\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#5 C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php(122): CController->render('update', Array)
+#6 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): EmpleadoController->actionUpdate()
+#7 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#16 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('empleado/update')
+#17 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/mclip/empleado/update
+HTTP_REFERER=http://localhost/mclip/site/visita
+---
+2014/09/17 00:08:48 [error] [php] Undefined variable: model_u (C:\xampp\htdocs\mclip\protected\views\empleado\update.php:1)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(869): EmpleadoController->renderFile()
+#1 C:\xampp\htdocs\framework\web\CController.php(782): EmpleadoController->renderPartial()
+#2 C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php(122): EmpleadoController->render()
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): EmpleadoController->actionUpdate()
+#4 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#6 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\views\empleado\update.php (1)
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (122)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:09:36 [error] [php] Undefined variable: model_u (C:\xampp\htdocs\mclip\protected\views\empleado\_form_update.php:90)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(869): EmpleadoController->renderFile()
+#1 C:\xampp\htdocs\mclip\protected\views\empleado\update.php(1): EmpleadoController->renderPartial()
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(95): EmpleadoController->renderInternal()
+#4 C:\xampp\htdocs\framework\web\CController.php(869): EmpleadoController->renderFile()
+#5 C:\xampp\htdocs\framework\web\CController.php(782): EmpleadoController->renderPartial()
+#6 C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php(122): EmpleadoController->render()
+#7 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): EmpleadoController->actionUpdate()
+#8 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#10 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#13 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#16 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#17 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\views\empleado\_form_update.php (90)
+in C:\xampp\htdocs\mclip\protected\views\empleado\update.php (1)
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (122)
+2014/09/17 00:11:37 [error] [php] Undefined index: id_emp_post (C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#1 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#4 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (108)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:11:56 [error] [php] Undefined index: id_emp_post (C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#1 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#4 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (108)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/17 00:21:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/17 00:21:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/17 00:21:59 [error] [php] Undefined variable: model_u (C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php:114)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#1 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#4 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (114)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:50:17 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:50:25 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:51:19 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:52:08 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:55:54 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:56:12 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:56:17 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:56:26 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:57:25 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 00:59:30 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:00:26 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:01:59 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (133)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:02:26 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:06:00 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:07:15 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:07:20 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:07:25 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:08:14 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:12:13 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:12:23 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:13:10 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:13:53 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:14:14 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:14:14 [error] [php] move_uploaded_file(): The second argument to copy() function cannot be a directory (C:\xampp\htdocs\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): EmpleadoController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#3 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#6 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#9 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (145)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:16:52 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:16:52 [error] [php] move_uploaded_file(): The second argument to copy() function cannot be a directory (C:\xampp\htdocs\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): EmpleadoController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#3 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#6 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#9 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (145)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:19:34 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:19:34 [error] [exception.CException] exception 'CException' with message 'CUploadedFile y sus behaviors no tienen un método o closure llamado "copy".' in C:\xampp\htdocs\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php(145): CComponent->__call('copy', Array)
+#1 C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php(145): CUploadedFile->copy('C:/xampp/htdocs...')
+#2 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): EmpleadoController->actionUpdate()
+#3 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('empleado/update')
+#13 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/mclip/empleado/update
+HTTP_REFERER=http://localhost/mclip/empleado/update
+---
+2014/09/17 01:20:47 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:20:53 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:24:41 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:24:41 [error] [php] Undefined variable: filename (C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php:146)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#1 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#4 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (146)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:24:55 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:24:55 [error] [php] Undefined variable: filename (C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php:147)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(133): EmpleadoController->runAction()
+#1 C:\xampp\htdocs\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(58): EmpleadoController->filterAccessControl()
+#4 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\framework\web\CController.php(265): EmpleadoController->runActionWithFilters()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(282): EmpleadoController->run()
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/empleado/update
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (147)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:25:03 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:27:44 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (134)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:29:36 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (136)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:29:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "uploads/logos/myImage (1).png"' in C:\xampp\htdocs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/logos/m...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mclip/uploads/logos/myImage%20(1).png
+HTTP_REFERER=http://localhost/mclip/empleado/update
+---
+2014/09/17 01:32:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "uploads/logos/myImage (1).png"' in C:\xampp\htdocs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/logos/m...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mclip/uploads/logos/myImage%20(1).png
+HTTP_REFERER=http://localhost/mclip/empleado/update
+---
+2014/09/17 01:32:44 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (136)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:32:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "uploads/logos/myImage (1).png"' in C:\xampp\htdocs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/logos/m...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mclip/uploads/logos/myImage%20(1).png
+HTTP_REFERER=http://localhost/mclip/empleado/update
+---
+2014/09/17 01:34:44 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "uploads/logos/myImage.png"' in C:\xampp\htdocs\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/logos/m...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mclip/uploads/logos/myImage.png
+HTTP_REFERER=http://localhost/mclip/empleado/update
+---
+2014/09/17 01:35:26 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:36:06 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:36:18 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:37:02 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:38:40 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:38:47 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:38:55 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:39:03 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (135)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:44:13 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:44:44 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:44:54 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:45:26 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:45:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login" solicitada.' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\mclip\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mclip/site/login
+---
+2014/09/17 01:49:58 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:53:11 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:53:21 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (70)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:53:50 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:55:56 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:56:16 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 01:59:01 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:01:07 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:01:22 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:01:39 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:02:47 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:11:05 [error] [php] Object of class Empleado could not be converted to string (C:\xampp\htdocs\mclip\protected\controllers\SiteController.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/site/visita
+in C:\xampp\htdocs\mclip\protected\controllers\SiteController.php (65)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:11:19 [error] [php] Object of class Empleado could not be converted to string (C:\xampp\htdocs\mclip\protected\controllers\SiteController.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/site/visita
+in C:\xampp\htdocs\mclip\protected\controllers\SiteController.php (65)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:12:12 [error] [php] Object of class Empleado could not be converted to string (C:\xampp\htdocs\mclip\protected\controllers\SiteController.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\mclip\index.php(13): CWebApplication->run()
+REQUEST_URI=/mclip/site/visita
+in C:\xampp\htdocs\mclip\protected\controllers\SiteController.php (65)
+in C:\xampp\htdocs\mclip\index.php (13)
+2014/09/17 02:16:49 [warning] [application] Error al establecer unsafe al atributo "logo" de "Empleado".
+in C:\xampp\htdocs\mclip\protected\controllers\EmpleadoController.php (127)
+in C:\xampp\htdocs\mclip\index.php (13)

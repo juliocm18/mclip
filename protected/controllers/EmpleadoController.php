@@ -31,6 +31,10 @@ class EmpleadoController extends Controller
 				'actions'=>array('create'),
 				'users'=>array('*'),
 			),
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('update'),
+				'users'=>array('@'),
+			),
 			
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -74,7 +78,19 @@ class EmpleadoController extends Controller
 					$model_u->Empleado_id=$model->id;
 					if($model_u->save())
 					{
-						Yii::app()->user->setFlash('registro_correcto','Se registraron los datos correctamente');				
+						Yii::app()->user->setFlash('registro_correcto','Se registraron los datos correctamente');
+						if (@!empty($_FILES['Empleado']['name']['logo'])) 
+						{											
+							$uploadedFile = CUploadedFile::getInstance($model, 'logo'); 
+							$fileName = "logo_"."$model->id".".".$uploadedFile->getExtensionName();
+			            	$model->logo = $fileName; 
+			            	$conexion = Yii::app()->db;
+							$consulta="UPDATE empleado SET logo='".$fileName."'
+							where id=".$model->id;
+							$dataReader=$conexion->createCommand($consulta)->query();
+
+			            	$uploadedFile->saveAs(Yii::getPathOfAlias('webroot')."/uploads/logos/".$fileName);   
+						}
 						$model=new Empleado;
 						$model_u=new Usuario;
 					}				
@@ -98,23 +114,48 @@ class EmpleadoController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate()
 	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Empleado']))
+		if(Yii::app()->session['id_emp_s']>0)
 		{
-			$model->attributes=$_POST['Empleado'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
+			$model=$this->loadModel(Yii::app()->session['id_emp_s']);
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+			if(isset($_POST['Empleado']))
+			{
+				
+				
+				$model->attributes=$_POST['Empleado'];
+
+				if($model->save())
+				{
+					if (@!empty($_FILES['Empleado']['name']['logo'])) 
+					{						
+						  if ($model->validate(array('logo'))) {
+		                    $uploadedFile = CUploadedFile::getInstance($model, 'logo');  
+		                  //  $fileName = "nombre_"."{$prefnombre}".'.jpg';
+		            		//$model->nombre = $fileName;   
+		            		//echo "se subio algo";
+		            		$fileName = "logo_"."$model->id".".".$uploadedFile->getExtensionName();
+							$uploadedFile->saveAs(Yii::getPathOfAlias('webroot')."/uploads/logos/".$fileName);
+							$model->logo=$fileName;
+							$model->save();
+		                } 								
+					}
+					Yii::app()->user->setFlash('registro_correcto','Se registraron los datos correctamente');
+				}
+				else{
+					Yii::app()->user->setFlash('registro_error','Error en el registro, revise que los datos sean válidos');
+				}		
+			}
+
+			$this->render('update',array(
+				'model'=>$model,
+			));
+		}
+		else
+		{
+			$this->redirect(Yii::app()->homeUrl);
+		}		
 	}
 
 	/**

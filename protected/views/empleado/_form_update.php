@@ -1,5 +1,5 @@
 <div  id="panelCont" class="col-md-12">
-	<h1>Registrar Médico</h1>
+	<h1>Modificar mis datos</h1>
 	<?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'empleado-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
@@ -88,21 +88,20 @@
 			<?php echo $form->error($model,'celular'); ?>
 		</div>	
 		<div class="form-group">
+		<?php if ($model->logo==null): ?>
+			<img  src="<?php echo Yii::app()->request->baseUrl; ?>/images/nologo.jpg"
+			alt="logo" width="100px" heigth="100px" > <br>
+		<?php else: ?>
+			<img  src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/logos/<?php echo $model->logo; ?>"
+			alt="logo" width="100px" heigth="100px" > <br>
+		<?php endif ?>
+		
 		<?php echo $form->labelEx($model,'logo'); ?>
 		<?php echo $form->fileField($model, 'logo');?>
 		<?php echo $form->error($model,'logo'); ?>
 		</div>	
-		<div class="form-group">
-			<?php echo $form->labelEx($model_u,'nick'); ?>
-			<?php echo $form->textField($model_u,'nick',array('size'=>60,'maxlength'=>100,'class'=>'form-control')); ?>
-			<?php echo $form->error($model_u,'nick'); ?>
-		</div>	
-		<div class="form-group">
-			<?php echo $form->labelEx($model_u,'clave'); ?>
-			<?php echo $form->passwordField($model_u,'clave',array('class'=>'form-control')); ?>
-			<?php echo $form->error($model_u,'clave'); ?>
-		</div>	
-		<input type="submit" value="Registrarme como Médico" class="btn btn-warning btn_naranja">
+		
+		<input type="submit" value="Guardar Datos" class="btn btn-warning btn_naranja">
 	<?php $this->endWidget(); ?>
 	</div>
 	<div style="clear:both"></div>

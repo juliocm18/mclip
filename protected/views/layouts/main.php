@@ -118,14 +118,20 @@
 				</div>
 				
 					<?php if (Yii::app()->session['s_nick']!=''): ?>
-						<?php $model_u=Usuario::model()->findByPk(Yii::app()->session['s_iduser']);	?>
-							<div class="col-md-12 usuarioTop" >	
-								<div style="float:right">
+						<?php $model_u=Usuario::model()->findByPk(Yii::app()->session['s_iduser']);	
+						Yii::app()->session['id_emp_s']=$model_u->empleado->id;?>
+							<div class="col-md-12 usuarioTop" >								
+								<div style="float:right">								
 									<form action="<?php echo Yii::app()->request->baseUrl; ?>/site/logout" method="post">
 									 	<input type="submit" class="btn  btn-danger" value="Cerrar Sesión">
 									</form>
 								</div>						
 								<div style="float:right;padding-top:5px;padding-right:20px;"><?php  echo "Bienvenido: ".$model_u->empleado->nombres;?>	</div>																											
+								<div style="float:right;padding-right:20px;">
+									<form action="<?php echo Yii::app()->request->baseUrl; ?>/empleado/update" method="post">										
+									 	<input type="submit" class="btn  btn-warning" value="Mi Perfil">
+									</form>	
+								</div>
 							</div>
 					<?php endif ?>
 				<div style="clear:both"></div>
@@ -133,10 +139,22 @@
 			</div>
 		</div>
 		<div class="col-md-12 padingcero">			
-			<?php echo $content; ?>			
+			<?php echo $content; ?>		
+
+		</div>
+			<div class="col-md-12  aparece" style="background-color:#F8F5E3;border-left: 3px #CDCDCD solid;">
+				<ul class="fa-ul" style="margin-left: 2px;float:right">
+				  <li style="display: inline;"><a  class="btn btn-lg" style="width: 50px; height:50px; background-color:#0054A6;margin:3px;color:white;"><i class="fa fa-facebook"></i></a></li>
+				  <li style="display: inline;" ><a  class="btn btn-lg" style="width: 50px; height:50px; background-color:#00AEEF;margin:3px;color:white;"><i class="fa fa-twitter"></i></a></li>
+				  <li style="display: inline;"><a  class="btn btn-lg" style="width: 50px; height:50px; background-color:#0085AE;margin:3px;color:white;"><i class="fa fa-linkedin"></i></a></li>
+				  <li style="display: inline;"><a  class="btn btn-lg" style="width: 50px; height:50px; background-color:#FFAA16;margin:3px;color:white;"><i class="fa fa-google-plus"></i></a></li>
+				</ul>	
+				<div style="clear:both"></div>
 		</div>		
+		<div style="clear:both"></div>
 		<div class="col-md-12 padingcero" style="background-color:#298DB1; padding:10px; text-align:center;color:white">		
-		Sitio web optimizado para Google Chrome y Mozilla Firefox
+		Sitio web optimizado para Google Chrome y Mozilla Firefox <br>
+		Desarrollado por <img  src="<?php echo Yii::app()->request->baseUrl; ?>/images/emedia.png" alt="">
 		</div>
 	</div>
 <style>
@@ -219,13 +237,61 @@
 </script>
 <div id="oculta" style="position:fixed; top:80px;">
 <ul class="fa-ul" style="margin-left: 2px;">
-  <li><a class="btn btn-lg" style="width: 50px; height:50px; background-color:#0054A6;margin:3px;color:white;"><i class="fa fa-facebook"></i></a></li>
-  <li><a class="btn btn-lg" style="width: 50px; height:50px; background-color:#00AEEF;margin:3px;color:white;"><i class="fa fa-twitter"></i></a></li>
-  <li><a class="btn btn-lg" style="width: 50px; height:50px; background-color:#0085AE;margin:3px;color:white;"><i class="fa fa-linkedin"></i></a></li>
-  <li><a class="btn btn-lg" style="width: 50px; height:50px; background-color:#FFAA16;margin:3px;color:white;"><i class="fa fa-google-plus"></i></a></li>
-</ul>
-	
+  <li><a id="fb" class="btn btn-lg" style="width: 50px; height:50px; background-color:#0054A6;margin:3px;color:white;"><i class="fa fa-facebook"></i></a></li>
+  <li ><a id="tw" class="btn btn-lg" style="width: 50px; height:50px; background-color:#00AEEF;margin:3px;color:white;"><i class="fa fa-twitter"></i></a></li>
+  <li><a id="ln" class="btn btn-lg" style="width: 50px; height:50px; background-color:#0085AE;margin:3px;color:white;"><i class="fa fa-linkedin"></i></a></li>
+  <li><a id="gg" class="btn btn-lg" style="width: 50px; height:50px; background-color:#FFAA16;margin:3px;color:white;"><i class="fa fa-google-plus"></i></a></li>
+</ul>	
 </div>
+
+<script>
+
+  $( "#fb" ).mouseenter(function() {
+     $( "#fb" ).animate({
+	    width: "100px",
+	  }, 800 );
+  })
+  .mouseleave(function() {
+     $( "#fb" ).animate({
+	    width: "50px",
+	  }, 800 );
+  });
+
+  /////////////////
+  $( "#tw" ).mouseenter(function() {
+     $( "#tw" ).animate({
+	    width: "100px",
+	  }, 800 );
+  })
+  .mouseleave(function() {
+     $( "#tw" ).animate({
+	    width: "50px",
+	  }, 800 );
+  });
+  //////////////
+  $( "#ln" ).mouseenter(function() {
+     $( "#ln" ).animate({
+	    width: "100px",
+	  }, 800 );
+  })
+  .mouseleave(function() {
+     $( "#ln" ).animate({
+	    width: "50px",
+	  }, 800 );
+  });
+  ///////////
+   $( "#gg" ).mouseenter(function() {
+     $( "#gg" ).animate({
+	    width: "100px",
+	  }, 800 );
+  })
+  .mouseleave(function() {
+     $( "#gg" ).animate({
+	    width: "50px",
+	  }, 800 );
+  });
+ 
+</script>
 
 <!--<script src="http://repository.chatwee.com/scripts/e9a7fde933ae79709dd1ccf8bfac46b6.js" type="text/javascript" charset="UTF-8"></script>-->
 </body>
